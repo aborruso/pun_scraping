@@ -36,8 +36,8 @@ def main():
     region = "eu-south-1"
     service = "execute-api"
 
-    # Process IDs in chunks of 10
-    chunk_size = 10
+    # Process IDs in chunks of 100
+    chunk_size = 100
     for i in range(0, len(station_ids), chunk_size):
         chunk = station_ids[i:i + chunk_size]
         print(f"\nProcessing chunk {i//chunk_size + 1}: {chunk}")
