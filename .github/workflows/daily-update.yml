@@ -1,0 +1,38 @@
+name: Daily Update
+
+on:
+  schedule:
+    - cron: "3 2 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run full_dump.js
+        run: node scripts/full_dump.js
+
+      - name: Run lista.sh
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y miller
+          bash scripts/lista.sh
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add -A
+          git commit -m "Update data" || echo "No changes to commit"
+          git push
