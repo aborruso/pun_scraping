@@ -20,6 +20,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Ensure data directory exists
+        run: mkdir -p data
+
       - name: Run full_dump.js
         run: node scripts/full_dump.js
 
