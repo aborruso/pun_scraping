@@ -24,13 +24,13 @@ jobs:
         run: mkdir -p data
 
       - name: Run full_dump.js
-        run: node scripts/full_dump.js
+        run: cd scripts && node full_dump.js
 
       - name: Run lista.sh
         run: |
           sudo apt-get update
           sudo apt-get install -y miller jq
-          bash scripts/lista.sh
+          cd scripts && bash lista.sh
 
       - name: Commit and push changes
         run: |
