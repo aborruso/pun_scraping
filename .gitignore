@@ -6,3 +6,4 @@ aws_creds.json
 scripts/schemaa/
 tmp*
 debug_station_details.jsonl
+node_modules_bak/
