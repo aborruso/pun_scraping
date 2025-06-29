@@ -1,6 +1,4 @@
-// pun_full_dump.js
-// node pun_full_dump.js
-// Script per scaricare l'elenco completo degli EVSE dalla Piattaforma Unica Nazionale.
+// Script per scaricare l'elenco completo dei punti di ricarica dalla Piattaforma Unica Nazionale
 
 const puppeteer = require('puppeteer');
 const fs = require('fs');
