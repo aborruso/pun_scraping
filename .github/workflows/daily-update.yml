@@ -13,6 +13,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
 
       - name: Ensure data directory exists
         run: mkdir -p data
@@ -21,7 +23,8 @@ jobs:
         run: cd scripts && node full_dump.js
 
       - name: Run lista.sh
-        run: cd scripts && bash lista.sh
+        run: |
+          cd scripts && bash lista.sh
 
       - name: Commit and push changes
         run: |
