@@ -1,0 +1,15 @@
+name: prova-andy-image
+on: workflow_dispatch     # lo lanci a mano dal tab “Actions”
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/aborruso/andy-image:1.0
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          scrape-cli --version
+          uv --version
+          mlr --version
+          jq --version
