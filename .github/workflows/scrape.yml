@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          scrape-cli --version
+          scrape --version
           uv --version
           mlr --version
           jq --version
