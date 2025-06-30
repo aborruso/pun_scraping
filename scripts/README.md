@@ -1,6 +1,6 @@
-"""# Scraper Piattaforma Unica Nazionale (PUN)
+# Scraper Piattaforma Unica Nazionale (PUN)
 
-Questo repository contiene uno script Python per interrogare l'API della Piattaforma Unica Nazionale (PUN) e raccogliere dettagli sulle stazioni di ricarica.
+Degli script Python per interrogare l'API della Piattaforma Unica Nazionale (PUN) e raccogliere dettagli sulle stazioni di ricarica.
 
 ## `scripts/full_dump.js`
 
