@@ -1,4 +1,4 @@
-# forza la conversione a LF su checkout e commit
-*.json  text eol=lf
-*.jsonl text eol=lf
-*.csv   text eol=lf
+# Normalizza i line endings per file di dati (ignora CR/LF, forza LF)
+*.json  text=auto eol=lf diff
+*.jsonl text=auto eol=lf diff
+*.csv   text=auto eol=lf diff
